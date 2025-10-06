@@ -40,4 +40,4 @@ yarn-error.log*
 next-env.d.ts
 
 # markdown
-LEARNINGS.MD
+notes.md
