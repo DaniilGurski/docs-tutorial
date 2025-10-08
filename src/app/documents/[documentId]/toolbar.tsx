@@ -17,6 +17,8 @@ import {
 import { cn } from "@/lib/utils";
 import { useEditorStore } from "@/store/use-editor-store";
 import { Separator } from "@/components/ui/separator";
+import FontFamilyButton from "./components/font-family-button";
+import HeadingLevelButton from "./components/heading-level-button";
 
 interface ToolbarButtonProps {
   onClick?: () => void;
@@ -134,9 +136,11 @@ export default function Toolbar() {
         <ToolbarButton key={item.label} {...item} />
       ))}
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
+      <FontFamilyButton />
       {/* TODO: Font family */}
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
       {/* TODO: Heading*/}
+      <HeadingLevelButton />
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
       {/* TODO: Font */}
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />

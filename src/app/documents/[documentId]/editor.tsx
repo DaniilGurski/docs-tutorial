@@ -11,6 +11,9 @@ import TableHeader from "@tiptap/extension-table-header";
 import TableRow from "@tiptap/extension-table-row";
 import Image from "@tiptap/extension-image";
 import Underline from "@tiptap/extension-underline";
+import TextStyle from "@tiptap/extension-text-style";
+import FontFamily from "@tiptap/extension-font-family";
+import ExtensionHeading from "@tiptap/extension-heading";
 import ImageResize from "tiptap-extension-resize-image";
 import { useEditorStore } from "@/store/use-editor-store";
 
@@ -52,15 +55,18 @@ export function Editor() {
     },
     extensions: [
       StarterKit,
-      Underline,
-      TaskList,
-      TaskItem.configure({ nested: true }),
+      TextStyle,
+      FontFamily,
+      ExtensionHeading,
+      Image,
+      ImageResize,
       Table,
       TableCell,
       TableHeader,
       TableRow,
-      Image,
-      ImageResize,
+      TaskList,
+      TaskItem.configure({ nested: true }),
+      Underline,
     ],
     content: ``,
   });
